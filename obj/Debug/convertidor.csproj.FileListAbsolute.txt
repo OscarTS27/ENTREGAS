@@ -1,0 +1,14 @@
+C:\Users\grm\source\repos\convertidor\bin\Debug\convertidor.exe.config
+C:\Users\grm\source\repos\convertidor\bin\Debug\convertidor.exe
+C:\Users\grm\source\repos\convertidor\bin\Debug\convertidor.pdb
+C:\Users\grm\source\repos\convertidor\obj\Debug\convertidor.csproj.AssemblyReference.cache
+C:\Users\grm\source\repos\convertidor\obj\Debug\convertidor.csproj.CoreCompileInputs.cache
+C:\Users\grm\source\repos\convertidor\obj\Debug\convertidor.exe
+C:\Users\grm\source\repos\convertidor\obj\Debug\convertidor.pdb
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\bin\Debug\convertidor.exe.config
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\bin\Debug\convertidor.exe
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\bin\Debug\convertidor.pdb
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\obj\Debug\convertidor.csproj.AssemblyReference.cache
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\obj\Debug\convertidor.csproj.CoreCompileInputs.cache
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\obj\Debug\convertidor.exe
+C:\Users\prado\OneDrive\Escritorio\Itzep_Quej_Guidman\convertidor\obj\Debug\convertidor.pdb

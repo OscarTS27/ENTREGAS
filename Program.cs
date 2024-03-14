@@ -4,88 +4,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace convertidor
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-            DateTime fechaActual = DateTime.Now;
-            string nombreMes = ObtenerNombreMes(fechaActual.Month);
-            int diasEnMes = ObtenerDiasEnMes(nombreMes);
+            string rpt;
+            int opc,km=1000;
+            double mtr = 1,
+                   yrd = 1.09361,
+                    vara = 1.1963081929167,
+                    result,valor;
+            do {
+                Console.WriteLine(".:CONVERTIDOR DE kilometros a UNIDADES:.");
+                Console.Write("Ingrese cantida Km: ");
+                valor = Convert.ToInt32(Console.ReadLine());
 
-            int i;
-            float[] vector = new float[diasEnMes]; ;
-            string nombre;
-          
-
-            Console.WriteLine(nombreMes);
-            Console.Write("Ingrese nombre: ");
-            nombre = Console.ReadLine();
-
-            for ( i = 0; i < diasEnMes; i++)
-            {
-                Console.Write($"{i + 1}. Ingrese ventas: ");
-                vector[i] = Convert.ToSingle(Console.ReadLine());
-            }
-
-            float suma = 0;
-
-            for ( i = 0; i < diasEnMes; i++)
-            {
-                suma += vector[i];
-            }
-
-            Console.WriteLine($"La suma de las ventas es: {suma}");
-            Console.WriteLine($"Promedio de ventas: {suma/diasEnMes}");
+                Console.WriteLine("1. metro");
+                Console.WriteLine("2. Yarda");
+                Console.WriteLine("3. vara");
+                Console.Write("Elige Oopcion: "); opc = Convert.ToInt32(Console.ReadLine());
 
 
+                if (opc == 1)
+                {
+                    result = mtr * valor*km;
+                    Console.WriteLine("Km  a metro es: " + result);
+                }
+                else if (opc == 2)
+                {
+                    result = valor * km*yrd;
+                    Console.WriteLine("Km  a yrd es: " + result);
+                }
+                else if (opc == 3)
+                {
+                    result = vara * km;
+                    Console.WriteLine("Km  a vara es: " + result);
+                }
+                else
+                {
+                    Console.WriteLine("Hey bobo bobo");
+                }
 
 
 
 
+                Console.Write("seguir (S/N): ");
+                rpt = Console.ReadLine();
+                Console.Clear();
+            } while ((rpt == "s") || (rpt == "S"));
 
 
 
 
             Console.ReadKey();
         }
-
-       
-        static string ObtenerNombreMes(int numeroMes)
-        {
-            return new DateTime(2022, numeroMes, 1).ToString("MMMM");
-        }
-
-     
-
-        
-        static int ObtenerDiasEnMes(string nombreMes)
-        {
-            switch (nombreMes.ToLower())
-            {
-                case "enero":
-                case "marzo":
-                case "mayo":
-                case "julio":
-                case "agosto":
-                case "octubre":
-                case "diciembre":
-                    return 31;
-                case "abril":
-                case "junio":
-                case "septiembre":
-                case "noviembre":
-                    return 30;
-                case "febrero":
-                    
-                    return 28;
-                default:
-                    return -1; 
-            }
-        }
-
-
     }
 }
