@@ -4,57 +4,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace convertidor
+namespace descuento
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int sueldo_base = 3300,sueldo_empleado;
+            double renta = 0.10,
+                   afp = 0.07,
+                   seguro_social = 0.05;
             string rpt;
-            int opc,km=1000;
-            double mtr = 1,
-                   yrd = 1.09361,
-                    vara = 1.1963081929167,
-                    result,valor;
+
             do {
-                Console.WriteLine(".:CONVERTIDOR DE kilometros a UNIDADES:.");
-                Console.Write("Ingrese cantida Km: ");
-                valor = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("1. metro");
-                Console.WriteLine("2. Yarda");
-                Console.WriteLine("3. vara");
-                Console.Write("Elige Oopcion: "); opc = Convert.ToInt32(Console.ReadLine());
+                Console.Write("ingrese sueldo: ");
+                sueldo_empleado = Convert.ToInt32(Console.ReadLine());
 
 
-                if (opc == 1)
+                if (sueldo_empleado >= sueldo_base)
                 {
-                    result = mtr * valor*km;
-                    Console.WriteLine("Km  a metro es: " + result);
-                }
-                else if (opc == 2)
-                {
-                    result = valor * km*yrd;
-                    Console.WriteLine("Km  a yrd es: " + result);
-                }
-                else if (opc == 3)
-                {
-                    result = vara * km;
-                    Console.WriteLine("Km  a vara es: " + result);
+                    Console.WriteLine("esta en el proyecto de ayuda social");
+
+                    double descuRenta = sueldo_empleado * renta;
+                    double descuAfp = sueldo_empleado * afp;
+                    double descuSeguro = sueldo_empleado * seguro_social;
+
+                    double descuento = descuRenta + descuAfp + descuSeguro;
+                    double sueldoFinal = sueldo_empleado - descuento;
+
+                    Console.WriteLine("Descuento: " + descuRenta);
+                    Console.WriteLine("Descuento: " + descuAfp);
+                    Console.WriteLine("Descuento: " + descuSeguro);
+
+                    Console.WriteLine("Descuento: " + descuento);
+                    Console.WriteLine("Sueldo final: " + sueldoFinal);
+
                 }
                 else
                 {
-                    Console.WriteLine("Hey bobo bobo");
+                    Console.WriteLine("muy poco");
                 }
 
 
-
-
                 Console.Write("seguir (S/N): ");
-                rpt = Console.ReadLine();
+                 rpt = Console.ReadLine();
                 Console.Clear();
             } while ((rpt == "s") || (rpt == "S"));
 
+         
+
+            
+            
 
 
 
